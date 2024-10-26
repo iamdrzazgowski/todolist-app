@@ -19,8 +19,6 @@ function App() {
     };
 
     const delItem = (id: string | number) => {
-        localStorage.setItem('todo', JSON.stringify(todos));
-
         const updatedItems = todos.filter((item) => item.id !== id);
 
         localStorage.setItem('todo', JSON.stringify(updatedItems));
